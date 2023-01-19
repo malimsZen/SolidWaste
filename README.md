@@ -9,8 +9,8 @@ Waste Company that collects and recycles solid waste across major cities in the 
 - Total waste collected per trucktype per station per city.
 
 ## Objectives
-### - Design a Data Warehouse
-### - Load data into Data Warehouse
-### - Write aggrgation queries
-### - Create MQTs
-### - Create a Dashboard
+- Design a Data Warehouse
+- Load data into Data Warehouse
+- Write aggrgation queries
+- Create MQTs
+- Create a Dashboard
