@@ -25,7 +25,7 @@ Wastecollected DECIMAL(6,2) NOT NULL
 /*MyDimZone dimensional table*/
 CREATE TABLE "BWV46471".MyDimZone ( 
 Zoneid SMALLINT NOT NULL PRIMARY KEY ,
-Collection zone CHAR(5) NOT NULL );
+Collectionzone CHAR(5) NOT NULL );
 
 /*FactsTrips fact table*/
 CREATE TABLE MyFactTrips( 
