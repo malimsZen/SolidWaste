@@ -27,4 +27,11 @@ CREATE TABLE "BWV46471".MyDimZone (
 Zoneid SMALLINT NOT NULL PRIMARY KEY ,
 Collection zone CHAR(5) NOT NULL );
 
-/*FactsTrips OLAP table*/
+/*FactsTrips fact table*/
+CREATE TABLE MyFactTrips( 
+Tripid BIGINT NOT NULL PRIMARY KEY,
+Dateid SMALLINT NOT NULL REFERENCES MyDimDate(Dateid),
+Wasteid SMALLINT NOT NULL REFERENCES MyDimWaste(Wasteid),
+zoneid SMALLINT NOT NULL REFERENCES DimZone(Zoneid),
+Wastecollected DECIMAL(6,2) NOT NULL
+);
