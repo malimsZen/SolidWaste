@@ -2,8 +2,8 @@
 # and returns a cursor object
 
 def connectToDB():
-    import MySQLdb
-    db = MySQLdb.connect(host="localhost", user="malims", passwd="P@$$w0rd", db="SolidWaste")
+    import mysql.connector
+    db = mysql.connector(host="localhost", user="malims", passwd="P@$$w0rd", db="SolidWaste")
     cursor = db.cursor()
     return cursor
 
@@ -18,7 +18,7 @@ def storeCSVtoDB():
                 reader = csv.reader(csvfile, delimiter=',')
                 for row in reader:
                     if row[0] == 'Date':
-                        cont
+                        continue
                     else:
                         cursor.execute("INSERT INTO " + file[:-4] + " VALUES (%s, %s, %s, %s, %s, %s)", row)
     cursor.close()
@@ -30,7 +30,8 @@ def getTables():
     tables = cursor.fetchall()
     cursor.close()
     return tables
-    print(tables)
+    new_var = print(tables)
+    new_var
 
 # create a function that returns a list of all the columns in a table
 def getColumns(table):
@@ -39,7 +40,8 @@ def getColumns(table):
     columns = cursor.fetchall()
     cursor.close()
     return columns
-    print(columns)
+    new_var = print(columns)
+    new_var
 
 
 
