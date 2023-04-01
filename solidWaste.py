@@ -2,7 +2,7 @@
 # and returns a cursor object
 
 def connectToDB():
-    import mysql.connector
+    from mysql.connector import MySQLConnection, Error
     db = mysql.connector(host="localhost", user="malims", passwd="P@$$w0rd", db="SolidWaste")
     cursor = db.cursor()
     return cursor
