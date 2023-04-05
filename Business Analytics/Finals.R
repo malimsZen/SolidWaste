@@ -5,9 +5,10 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(readr)
+library(readxl)
 
 # Read in the data
-data <- read_csv("/workspaces/SolidWaste/BankChurners.xlsx")
+data <- read_excel("/workspaces/SolidWaste/BankChurners.xlsx")
 
 # Create a new dataframe with only the columns we want
 data <- data %>% select(Months_on_book, Total_Amt_Chng_Q4_Q1)
@@ -30,7 +31,7 @@ library(tidyr)
 library(readr)
 
 # Read in the data
-data <- read_csv("/workspaces/SolidWaste/BankChurners.xlsx")
+data <- read_excel("/workspaces/SolidWaste/BankChurners.xlsx")
 
 # Create a new dataframe with only the columns we want
 data <- data %>% select(Months_on_book, Credit_Limit, Education_Level, Marital_Status)
