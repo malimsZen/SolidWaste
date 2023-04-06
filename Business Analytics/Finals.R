@@ -37,7 +37,7 @@ data <- read_excel("/workspaces/SolidWaste/BankChurners.xlsx")
 data <- data %>% select(Months_on_book, Credit_Limit, Education_Level, Marital_Status)
 
 # Create a scatter plot
-ggplot(data, aes(x = Months_on_book, y = Credit_Limit)) + geom_point() + facet_wrap(~Marital_Status)
+ggplot(data, aes(x = Months_on_book, y = Credit_Limit)) + geom_point() + facet_wrap(~Marital_Status) + ip;i
 
 # Save the plot
 ggsave("ScatterPlot.png")

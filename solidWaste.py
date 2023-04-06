@@ -2,12 +2,13 @@
 # and returns a cursor object
 
 def connectToDB():
-    from mysql.connector import MySQLConnection, Error
-    db = mysql.connector(host="localhost", user="malims", passwd="P@$$w0rd", db="SolidWaste")
+    from mysql.connector import mysqlconnector as msc
+    db = msc.connector(host="localhost", user="malims", passwd="P@$$w0rd", db="SolidWaste")
     cursor = db.cursor()
     return cursor
 
-# iterate through the whole folder and store each CSV file to their corresponding table in the solidWaste.sql file in the same directory
+# iterate through the whole folder and store each CSV file to their corresponding table in 
+# the solidWaste.sql file in the same directory
 def storeCSVtoDB():
     import os
     import csv
@@ -42,7 +43,6 @@ def getColumns(table):
     return columns
     new_var = print(columns)
     new_var
-
 
 
 
